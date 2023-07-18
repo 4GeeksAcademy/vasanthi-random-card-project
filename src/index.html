@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Random Card generator</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -11,19 +11,70 @@
       crossorigin="anonymous"
     />
     <link rel="shortcut icon" href="./4geeks.ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+      <div class="row">
+        <div class="col-sm-6 mb-3 mb-sm-0">
+          <div class="card" id="card">
+            <div class="card-body">
+              <h1 class="text-start icon" id="suits"></h1>
+              <h1
+                class="d-flex justify-content-center align-items-center value"
+                id="cardNo"
+              ></h1>
+              <h1 class="icon-reverse text-start" id="suits"></h1>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 d-flex justify-content-center align-items-center">
+          <div>
+            <div class="mb-3 text-start">
+              <label for="width" class="form-label text-white">Width:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="width"
+                placeholder="Enter card Width"
+              />
+            </div>
+            <div class="mb-3 text-start">
+              <label for="height" class="form-label text-white">Height:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="height"
+                placeholder="Enter Card height"
+              />
+            </div>
+            <button
+              class="btn btn-info text-white"
+              id="btn"
+              onclick="generateRandomCardDimensions()"
+            >
+              Generate Card dimensions
+            </button>
+            <button
+              class="btn btn-info text-white"
+              id="btn"
+              onclick="generateRandomCardOnClick()"
+            >
+              Generate Random Card
+            </button>
+          </div>
+        </div>
       </div>
     </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

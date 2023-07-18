@@ -1,1 +1,19 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  font-family: inherit;
+}
+.icon-reverse {
+  transform: rotate(180deg);
+}
+.card {
+  border-radius: 10px;
+  width: 400px;
+  margin: 20px;
+}
+.value {
+  height: 400px;
+}
+.card h1 {
+  font-size: 4rem;
+}
